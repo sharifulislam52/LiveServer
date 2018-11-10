@@ -49,8 +49,8 @@ open class LiveServer(internal var context: Context) : Live() {
         LiveRequestFailed(name)
     }
 
-    fun LiveResult(name: String, result: String, `object`: JSONObject) {}
-    fun LiveRequestFailed(name: String) {}
+    open fun LiveResult(name: String, result: String, `object`: JSONObject) {}
+    open fun LiveRequestFailed(name: String) {}
 
     fun Start(name: String, link: String, data: String) {
         val live_cursor = live_db.get_data()
