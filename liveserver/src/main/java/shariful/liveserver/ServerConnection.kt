@@ -93,6 +93,6 @@ open class ServerConnection : AsyncTask<String,Void,String>() {
         super.onProgressUpdate()
     }
 
-    fun ServerResult(name: String, result: String, `object`: JSONObject) {}
-    fun ServerRequestFailed(name: String) {}
+    open fun ServerResult(name: String, result: String, `object`: JSONObject) {}
+    open fun ServerRequestFailed(name: String) {}
 }
